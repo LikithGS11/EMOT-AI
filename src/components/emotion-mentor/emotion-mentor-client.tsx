@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import { Loader2, Smile, Meh, Frown, Sparkles, BrainCircuit, HeartHandshake, PenSquare, Quote, Wind, Music } from "lucide-react";
+import { Loader2, Smile, Meh, Frown, Sparkles, BrainCircuit, HeartHandshake } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -19,7 +19,6 @@ import { Form, FormControl, FormField, FormItem, FormMessage } from "@/component
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
 import { analyzeUserInput, type AnalyzeUserInputOutput } from "@/ai/flows/analyze-user-input";
-import { generateGuidedSupport, type GenerateGuidedSupportOutput } from "@/ai/flows/generate-guided-support";
 import { Separator } from "@/components/ui/separator";
 import { useToast } from "@/hooks/use-toast";
 import Link from "next/link";
@@ -33,10 +32,7 @@ const formSchema = z.object({
 
 export default function EmotionMentorClient() {
   const [analysisResult, setAnalysisResult] = useState<AnalyzeUserInputOutput | null>(null);
-  const [guidedSupportResult, setGuidedSupportResult] = useState<GenerateGuidedSupportOutput | null>(null);
   const [isLoading, setIsLoading] = useState(false);
-  const [isLoadingSupport, setIsLoadingSupport] = useState(false);
-  const [showSupportPrompt, setShowSupportPrompt] = useState(false);
   const { toast } = useToast();
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -49,12 +45,9 @@ export default function EmotionMentorClient() {
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsLoading(true);
     setAnalysisResult(null);
-    setGuidedSupportResult(null);
-    setShowSupportPrompt(false);
     try {
       const result = await analyzeUserInput({ userInput: values.userInput });
       setAnalysisResult(result);
-      setShowSupportPrompt(true);
     } catch (e) {
       const error = e as Error;
       toast({
@@ -65,29 +58,6 @@ export default function EmotionMentorClient() {
       console.error(e);
     } finally {
       setIsLoading(false);
-    }
-  }
-
-  async function handleGuidedSupport() {
-    if (!analysisResult || !form.getValues().userInput) return;
-    setIsLoadingSupport(true);
-    setShowSupportPrompt(false);
-    try {
-      const result = await generateGuidedSupport({
-        userInput: form.getValues().userInput,
-        sentiment: analysisResult.sentiment,
-        psychologicalTones: analysisResult.psychologicalTones,
-      });
-      setGuidedSupportResult(result);
-    } catch (e) {
-      toast({
-        variant: "destructive",
-        title: "Could not get guided support.",
-        description: "Something went wrong while generating support content. Please try again.",
-      });
-      console.error(e);
-    } finally {
-      setIsLoadingSupport(false);
     }
   }
 
@@ -213,68 +183,6 @@ export default function EmotionMentorClient() {
                     </p>
                   </blockquote>
                 </div>
-
-                {showSupportPrompt && (
-                   <div className="w-full text-center p-4 bg-gray-900/50 rounded-lg space-y-4 animate-in fade-in-50 duration-500">
-                      <p className="text-gray-300">Would you like to explore this further with some guided support?</p>
-                      <Button onClick={handleGuidedSupport} disabled={isLoadingSupport}>
-                         {isLoadingSupport ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : 'Yes, please'}
-                      </Button>
-                   </div>
-                )}
-                
-                {isLoadingSupport && <div className="flex justify-center w-full"><Loader2 className="h-8 w-8 animate-spin text-primary" /></div>}
-
-                {guidedSupportResult && (
-                  <div className="w-full space-y-8 animate-in fade-in-50 duration-500">
-                    <Separator className="bg-gray-800" />
-                    <h2 className="text-2xl font-headline text-white text-center">Guided Support Mode</h2>
-                    
-                    <div className="space-y-3">
-                      <h3 className="font-headline text-xl flex items-center gap-2 font-semibold text-white">
-                        <PenSquare className="h-6 w-6 text-primary" />
-                        Journaling Prompt
-                      </h3>
-                      <blockquote className="p-4 bg-gray-800/50 rounded-lg border-l-4 border-gray-700">
-                        <p className="italic text-gray-300">{guidedSupportResult.journalingPrompt}</p>
-                      </blockquote>
-                    </div>
-                    
-                    <div className="space-y-3">
-                      <h3 className="font-headline text-xl flex items-center gap-2 font-semibold text-white">
-                        <Quote className="h-6 w-6 text-primary" />
-                        Daily Affirmation
-                      </h3>
-                      <blockquote className="p-4 bg-gray-800/50 rounded-lg border-l-4 border-gray-700">
-                        <p className="italic text-gray-300">{guidedSupportResult.affirmation}</p>
-                      </blockquote>
-                    </div>
-
-                    <div className="space-y-3">
-                      <h3 className="font-headline text-xl flex items-center gap-2 font-semibold text-white">
-                        <Wind className="h-6 w-6 text-primary" />
-                        Breathing Exercise: {guidedSupportResult.breathingExercise.name}
-                      </h3>
-                       <div className="p-4 bg-gray-800/50 rounded-lg border-l-4 border-gray-700 text-gray-300">
-                        <p>{guidedSupportResult.breathingExercise.instructions}</p>
-                        <div className="mt-4 w-24 h-24 mx-auto border-4 border-primary rounded-full flex items-center justify-center animate-[pulse_4s_ease-in-out_infinite]">
-                          <div className="w-20 h-20 bg-primary/20 rounded-full animate-[pulse_4s_ease-in-out_infinite_reverse]"></div>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div className="space-y-3">
-                      <h3 className="font-headline text-xl flex items-center gap-2 font-semibold text-white">
-                        <Music className="h-6 w-6 text-primary" />
-                        Playlist Suggestion
-                      </h3>
-                       <div className="p-4 bg-gray-800/50 rounded-lg border-l-4 border-gray-700">
-                        <p className="text-gray-300">Consider listening to {guidedSupportResult.playlistSuggestion}.</p>
-                      </div>
-                    </div>
-
-                  </div>
-                )}
               </div>
             </CardFooter>
           )}
