@@ -16,7 +16,7 @@ export default function Home() {
         <header className="py-4 px-6 md:px-10 flex items-center justify-between border-b border-gray-800/50 backdrop-blur-sm">
           <div className="flex items-center gap-2">
             <BotMessageSquare className="h-8 w-8 text-primary" />
-            <h1 className="text-2xl font-bold tracking-tight">Emotion Mentor</h1>
+            <h1 className="text-2xl font-bold tracking-tight">EmotAI</h1>
           </div>
           <nav className="flex items-center gap-4">
             <Button asChild variant="outline" className="bg-transparent border-primary text-primary hover:bg-primary hover:text-black">
@@ -34,7 +34,7 @@ export default function Home() {
                 Understand Your Feelings, Find Your Calm.
               </h2>
               <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mt-6">
-                Emotion Mentor is your personal AI companion for exploring your
+                EmotAI is your personal AI companion for exploring your
                 emotional world. Share what's on your mind and receive gentle,
                 insightful analysis to help you understand your feelings better.
               </p>
@@ -77,7 +77,7 @@ export default function Home() {
                   </div>
                   <h3 className="text-2xl font-bold text-white">Always Available</h3>
                   <p className="text-gray-400 mt-2">
-                    Your Emotion Mentor is here for you 24/7, whenever you need to talk.
+                    Your EmotAI is here for you 24/7, whenever you need to talk.
                   </p>
                 </div>
               </div>
@@ -89,7 +89,7 @@ export default function Home() {
 
         <footer className="py-10 border-t border-gray-800/50">
           <div className="container mx-auto px-6 md:px-10 text-center text-gray-500">
-            <p>&copy; 2024 Emotion Mentor. All rights reserved.</p>
+            <p>&copy; 2024 EmotAI. All rights reserved.</p>
           </div>
         </footer>
       </div>

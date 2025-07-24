@@ -107,7 +107,7 @@ export default function EmotionMentorClient() {
           <CardHeader className="text-center">
             <div className="flex justify-center items-center gap-2 mb-2">
               <Sparkles className="h-8 w-8 text-primary" />
-              <CardTitle className="text-3xl font-headline tracking-tight text-white">Emotion Mentor</CardTitle>
+              <CardTitle className="text-3xl font-headline tracking-tight text-white">EmotAI</CardTitle>
             </div>
             <CardDescription className="text-md text-gray-400">
               Share your thoughts or feelings, and I'll provide you with an emotional insight and a supportive word.
