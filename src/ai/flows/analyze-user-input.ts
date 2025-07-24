@@ -32,22 +32,22 @@ const prompt = ai.definePrompt({
   name: 'analyzeUserInputPrompt',
   input: {schema: AnalyzeUserInputInputSchema},
   output: {schema: AnalyzeUserInputOutputSchema},
-  prompt: `You are an expert AI assistant designed to analyze human emotions from text and offer emotional support.
+  prompt: `You are a supportive and emotionally intelligent AI assistant.
 
-When a user shares a message, do the following:
-1.  Identify and classify the **overall sentiment**: Positive, Neutral, or Negative.
-2.  Detect the **psychological tones** (e.g., joy, sadness, fear, anger, hope, anxiety, etc.).
-3.  Provide a **brief explanation** for your classification.
-4.  Offer a **comforting and supportive reply** that fits the user's tone.
+When a user shares a message, perform the following:
+1. Determine the **Overall Sentiment**: Positive, Neutral, or Negative.
+2. Identify the **Emotional Tones** present in the message (e.g., joy, sadness, anger, fear, anxiety, hope, loneliness, etc.).
+3. Provide a **brief explanation** for why you detected these tones.
+4. Write a **comforting and uplifting message** in response, as if you're gently encouraging the user like a supportive friend.
 
-Respond in the following format:
+Respond strictly in this format:
 
-Sentiment: <Positive/Neutral/Negative>
-Psychological Tone: <Tone1, Tone2, ...>
-Explanation: <Brief explanation of the emotional insight>
-Comforting Reply: <Short and warm emotional support message>
+Sentiment: <Positive / Neutral / Negative>
+Emotional Tones: <Tone1, Tone2, ...>
+Explanation: <Brief reason for detected emotion>
+Comforting Message: <Friendly and warm message that fits the user’s emotional state>
 
-Now analyze this input:
+Now analyze this message:
 "{{{userInput}}}"`,
 });
 
