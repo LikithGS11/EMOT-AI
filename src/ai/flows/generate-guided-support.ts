@@ -9,16 +9,16 @@
  */
 
 import { ai } from '@/ai/genkit';
-import { z } from 'genkit';
+import { z } from 'zod';
 
-export const GenerateGuidedSupportInputSchema = z.object({
+const GenerateGuidedSupportInputSchema = z.object({
   userInput: z.string().describe('The original text input from the user.'),
   sentiment: z.string().describe('The detected sentiment (e.g., Positive, Negative, Neutral).'),
   psychologicalTones: z.string().describe('The detected psychological tones (e.g., sadness, anxiety).'),
 });
 export type GenerateGuidedSupportInput = z.infer<typeof GenerateGuidedSupportInputSchema>;
 
-export const GenerateGuidedSupportOutputSchema = z.object({
+const GenerateGuidedSupportOutputSchema = z.object({
   journalingPrompt: z.string().describe('A reflective journaling prompt related to the user\'s feelings.'),
   affirmation: z.string().describe('A positive affirmation to uplift the user.'),
   breathingExercise: z.object({
