@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, BotMessageSquare } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import { ThemeToggle } from "@/components/theme-toggle";
 
 export default function Home() {
   return (
@@ -17,7 +16,6 @@ export default function Home() {
             <h1 className="text-2xl font-bold">Emotion Mentor</h1>
           </div>
           <nav className="flex items-center gap-4">
-            <ThemeToggle />
             <Button asChild variant="outline" className="bg-transparent border-primary text-primary hover:bg-primary hover:text-primary-foreground">
               <Link href="/mentor">Get Started</Link>
             </Button>
@@ -49,7 +47,7 @@ export default function Home() {
                   alt="Abstract illustration of emotional well-being"
                   fill
                   data-ai-hint="emotional well-being"
-                  className="opacity-50 object-cover"
+                  style={{ objectFit: "cover", opacity: 0.5 }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
               </div>
