@@ -2,11 +2,13 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, BotMessageSquare, LayoutDashboard } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import DailyAffirmation from "@/components/daily-affirmation";
 
 export default function Home() {
   return (
     <div className="bg-black text-white min-h-screen">
       <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 bg-black bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.05)_1px,_transparent_1px)] [background-size:2rem_2rem]"></div>
       </div>
       <div className="relative z-10">
@@ -67,6 +69,9 @@ export default function Home() {
               </div>
             </div>
           </div>
+
+          <DailyAffirmation />
+
         </main>
 
         <footer className="py-10 border-t border-gray-800">
