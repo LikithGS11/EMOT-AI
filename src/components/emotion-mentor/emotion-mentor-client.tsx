@@ -20,7 +20,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
 import { analyzeUserInput, type AnalyzeUserInputOutput } from "@/ai/flows/analyze-user-input";
 import { generateGuidedSupport, type GenerateGuidedSupportOutput } from "@/ai/flows/generate-guided-support";
-import { saveMood } from "@/services/mood-service";
 import { Separator } from "@/components/ui/separator";
 import { useToast } from "@/hooks/use-toast";
 import Link from "next/link";
@@ -56,11 +55,6 @@ export default function EmotionMentorClient() {
       const result = await analyzeUserInput({ userInput: values.userInput });
       setAnalysisResult(result);
       setShowSupportPrompt(true);
-      await saveMood(result, values.userInput);
-      toast({
-        title: "Analysis Saved",
-        description: "Your mood entry has been saved to your dashboard.",
-      });
     } catch (e) {
       const error = e as Error;
       toast({

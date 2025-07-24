@@ -18,12 +18,6 @@ export default function Home() {
             <h1 className="text-2xl font-bold">Emotion Mentor</h1>
           </div>
           <nav className="flex items-center gap-4">
-             <Button asChild variant="ghost" className="hidden md:flex">
-              <Link href="/dashboard">
-                <LayoutDashboard className="mr-2" />
-                Dashboard
-              </Link>
-            </Button>
             <Button asChild variant="outline" className="bg-transparent border-primary text-primary hover:bg-primary hover:text-primary-foreground">
               <Link href="/mentor">Get Started</Link>
             </Button>
@@ -47,12 +41,6 @@ export default function Home() {
                     <Link href="/mentor">
                       Try the Analyzer
                       <ArrowRight className="ml-2" />
-                    </Link>
-                  </Button>
-                   <Button size="lg" asChild variant="secondary" className="md:hidden">
-                    <Link href="/dashboard">
-                      View Dashboard
-                      <LayoutDashboard className="ml-2" />
                     </Link>
                   </Button>
                 </div>
