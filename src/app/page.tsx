@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, BotMessageSquare } from "lucide-react";
+import { ArrowRight, BotMessageSquare, LayoutDashboard } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -16,6 +16,12 @@ export default function Home() {
             <h1 className="text-2xl font-bold">Emotion Mentor</h1>
           </div>
           <nav className="flex items-center gap-4">
+             <Button asChild variant="ghost" className="hidden md:flex">
+              <Link href="/dashboard">
+                <LayoutDashboard className="mr-2" />
+                Dashboard
+              </Link>
+            </Button>
             <Button asChild variant="outline" className="bg-transparent border-primary text-primary hover:bg-primary hover:text-primary-foreground">
               <Link href="/mentor">Get Started</Link>
             </Button>
@@ -34,12 +40,20 @@ export default function Home() {
                   emotional world. Share what's on your mind and receive gentle,
                   insightful analysis to help you understand your feelings better.
                 </p>
-                <Button size="lg" asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
-                  <Link href="/mentor">
-                    Try the Analyzer
-                    <ArrowRight className="ml-2" />
-                  </Link>
-                </Button>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button size="lg" asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
+                    <Link href="/mentor">
+                      Try the Analyzer
+                      <ArrowRight className="ml-2" />
+                    </Link>
+                  </Button>
+                   <Button size="lg" asChild variant="secondary" className="md:hidden">
+                    <Link href="/dashboard">
+                      View Dashboard
+                      <LayoutDashboard className="ml-2" />
+                    </Link>
+                  </Button>
+                </div>
               </div>
               <div className="relative h-80 md:h-96 rounded-2xl overflow-hidden shadow-2xl shadow-primary/20">
                 <Image
