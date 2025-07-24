@@ -21,6 +21,7 @@ const AnalyzeUserInputOutputSchema = z.object({
   psychologicalTones: z.string().describe('A comma-separated list of psychological tones detected in the text.'),
   explanation: z.string().describe('A brief explanation of the emotional insight.'),
   comfortingReply: z.string().describe('A short and warm emotional support message.'),
+  musicRecommendation: z.array(z.string()).optional().describe('A list of music recommendations if the user asks for it.'),
 });
 export type AnalyzeUserInputOutput = z.infer<typeof AnalyzeUserInputOutputSchema>;
 
@@ -39,13 +40,7 @@ When a user shares a message, perform the following:
 2. Identify the **Emotional Tones** present in the message (e.g., joy, sadness, anger, fear, anxiety, hope, loneliness, etc.).
 3. Provide a **brief explanation** for why you detected these tones.
 4. Write a **comforting and uplifting message** in response, as if you're gently encouraging the user like a supportive friend.
-
-Respond strictly in this format:
-
-Sentiment: <Positive / Neutral / Negative>
-Emotional Tones: <Tone1, Tone2, ...>
-Explanation: <Brief reason for detected emotion>
-Comforting Message: <Friendly and warm message that fits the user’s emotional state>
+5. If the user explicitly asks for music recommendations, provide a list of 3-5 songs that fit their mood.
 
 Now analyze this message:
 "{{{userInput}}}"`,

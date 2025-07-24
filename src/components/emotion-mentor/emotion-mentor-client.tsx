@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import { Loader2, Smile, Meh, Frown, Sparkles, BrainCircuit, HeartHandshake } from "lucide-react";
+import { Loader2, Smile, Meh, Frown, Sparkles, BrainCircuit, HeartHandshake, Music } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -171,6 +171,20 @@ export default function EmotionMentorClient() {
                     ))}
                   </div>
                 </div>
+
+                {analysisResult.musicRecommendation && analysisResult.musicRecommendation.length > 0 && (
+                  <div className="space-y-3">
+                    <h3 className="font-headline text-xl flex items-center gap-2 font-semibold text-white">
+                      <Music className="h-6 w-6 text-primary" />
+                      Music For You
+                    </h3>
+                    <ul className="list-disc list-inside text-gray-300 space-y-1">
+                      {analysisResult.musicRecommendation.map((song, index) => (
+                        <li key={index}>{song}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
 
                 <div className="space-y-3">
                   <h3 className="font-headline text-xl flex items-center gap-2 font-semibold text-white">
