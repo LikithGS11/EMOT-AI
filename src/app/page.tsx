@@ -47,10 +47,9 @@ export default function Home() {
                 <Image
                   src="https://placehold.co/600x400.png"
                   alt="Abstract illustration of emotional well-being"
-                  layout="fill"
-                  objectFit="cover"
+                  fill
                   data-ai-hint="emotional well-being"
-                  className="opacity-50"
+                  className="opacity-50 object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
               </div>
