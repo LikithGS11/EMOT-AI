@@ -131,6 +131,6 @@ See the [LICENSE](./LICENSE) file for full terms and usage rights.
 <h3 align="center">🧠 EmotAI - Built to Understand You ⚡</h3>
 🧠🎮 Powered by code. Crafted for emotion.
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Platane/snk/output/github-contribution-grid-snake-dark.svg" />
+  <img src="https://i.imgur.com/xmGpKqD.png" width="500"/>
 </p>
 
