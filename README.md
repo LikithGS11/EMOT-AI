@@ -139,15 +139,9 @@ See the [LICENSE](./LICENSE) file for full terms and usage rights.
   🧠🎮 Powered by code. Crafted for emotion.
 </p>
 
-<pre align="center">
-█▀█ █▀▀ █▀▀   █▀▀ ▄▀█ █▀█ █▄█
-█▀▄ ██▄ █▄▄   █▄█ █▀█ █▀▄ ░█░
-
-         Thanks for stopping by!
-</pre>
-
-
-
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Platane/snk/output/github-contribution-grid-snake-dark.svg" />
+</p>
 
 
 
