@@ -125,15 +125,23 @@ See the [LICENSE](./LICENSE) file for full terms and usage rights.
 ███████╗██║ ╚═╝ ██║╚██████╔╝   ██║   ██║  ██║███████╗
 ╚══════╝╚═╝     ╚═╝ ╚═════╝    ╚═╝   ╚═╝  ╚═╝╚══════╝
 </pre>
+
 ---
-> “Even in the darkest dungeons, a spark of light can lead the way.”  
-> — *EmotAI*
-<h3 align="center">🧠 EmotAI - Built to Understand You ⚡</h3>
-🧠🎮 Powered by code. Crafted for emotion.
+
+<p align="center">
+  <em>“Even in the darkest dungeons, a spark of light can lead the way.”</em><br>
+  — <strong>EmotAI</strong>
+</p>
+
+<h3 align="center">🧠 EmotAI — Built to Understand You ⚡</h3>
+
+<p align="center">
+  🧠🎮 Powered by code. Crafted for emotion.
+</p>
+
 <p align="center">
   <img src="https://i.gifer.com/7VE.gif" width="600"/>
 </p>
-
 
 
 
