@@ -131,8 +131,9 @@ See the [LICENSE](./LICENSE) file for full terms and usage rights.
 <h3 align="center">🧠 EmotAI - Built to Understand You ⚡</h3>
 🧠🎮 Powered by code. Crafted for emotion.
 <p align="center">
-  <img src="https://i.imgur.com/AqXZU8T.gif" width="500"/>
+  <img src="https://media.giphy.com/media/xTiIzJSKB4l7xTouE8/giphy.gif" width="600"/>
 </p>
+
 
 
 
