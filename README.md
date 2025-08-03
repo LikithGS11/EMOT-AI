@@ -140,7 +140,7 @@ See the [LICENSE](./LICENSE) file for full terms and usage rights.
 </p>
 
 <p align="center">
-  <img src="https://i.gifer.com/7VE.gif" width="600"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:8E2DE2,100:4A00E0&height=120&section=footer"/>
 </p>
 
 
