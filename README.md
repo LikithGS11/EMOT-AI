@@ -113,15 +113,22 @@ Licensed under the **MIT License**.
 See the [LICENSE](./LICENSE) file for full terms and usage rights.
 
 ---
+<p align="center">
+  <img src="https://img.shields.io/badge/EmotAI-Powered_by_Genkit_AI-purple?style=for-the-badge&logo=next.js" />
+</p>
 
-## 👾 Creator
+<pre align="center">
+███████╗███╗   ███╗ ██████╗ ████████╗ █████╗ ██╗
+██╔════╝████╗ ████║██╔═══██╗╚══██╔══╝██╔══██╗██║
+█████╗  ██╔████╔██║██║   ██║   ██║   ███████║██║
+██╔══╝  ██║╚██╔╝██║██║   ██║   ██║   ██╔══██║██║
+███████╗██║ ╚═╝ ██║╚██████╔╝   ██║   ██║  ██║███████╗
+╚══════╝╚═╝     ╚═╝ ╚═════╝    ╚═╝   ╚═╝  ╚═╝╚══════╝
 
-Built with 💻 and 🎮 by **Likith G S**  
-📧 Email: likithgs11@example.com  
-🔗 GitHub: [https://github.com/LikithGS11](https://github.com/LikithGS11)
+    🧠 EmotAI - Built to Understand You ⚡
+</pre>
 
 ---
-
 > “Even in the darkest dungeons, a spark of light can lead the way.”  
 > — *EmotAI*
 
