@@ -131,5 +131,6 @@ See the [LICENSE](./LICENSE) file for full terms and usage rights.
 <h3 align="center">🧠 EmotAI - Built to Understand You ⚡</h3>
 🧠🎮 Powered by code. Crafted for emotion.
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0f2027,203a43,2c5364&height=100&section=footer"/>
+  <img src="https://capsule-render.vercel.app/api?type=rect&color=000000,111111,222222&height=120&section=header&text=Welcome%20to%20EmotAI&fontColor=00ffff&fontSize=35&animation=twinkling" />
 </p>
+
