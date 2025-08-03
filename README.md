@@ -124,12 +124,12 @@ See the [LICENSE](./LICENSE) file for full terms and usage rights.
 ██╔══╝  ██║╚██╔╝██║██║   ██║   ██║   ██╔══██║██║
 ███████╗██║ ╚═╝ ██║╚██████╔╝   ██║   ██║  ██║███████╗
 ╚══════╝╚═╝     ╚═╝ ╚═════╝    ╚═╝   ╚═╝  ╚═╝╚══════╝
-
-    🧠 EmotAI - Built to Understand You ⚡
 </pre>
-
 ---
 > “Even in the darkest dungeons, a spark of light can lead the way.”  
 > — *EmotAI*
-
+<h3 align="center">🧠 EmotAI - Built to Understand You ⚡</h3>
 🧠🎮 Powered by code. Crafted for emotion.
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0f2027,203a43,2c5364&height=100&section=footer"/>
+</p>
