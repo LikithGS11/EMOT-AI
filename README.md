@@ -140,7 +140,7 @@ See the [LICENSE](./LICENSE) file for full terms and usage rights.
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&duration=5000&pause=1000&center=true&vCenter=true&width=435&lines=Thank+You+for+Visiting+🚀;Stay+Awesome+🎮+Keep+Hacking+💻;" />
+  <img src="https://media.giphy.com/media/LzK0YqMmVg1LO/giphy.gif" width="600" alt="matrix-rain"/>
 </p>
 
 
