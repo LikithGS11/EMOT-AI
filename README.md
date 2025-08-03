@@ -139,11 +139,13 @@ See the [LICENSE](./LICENSE) file for full terms and usage rights.
   🧠🎮 Powered by code. Crafted for emotion.
 </p>
 
-<!-- ASCII + Glitch Text + Waving Footer -->
-[ASCII block]
-[Typing effect line]
-[Snake banner]
-[Waving footer]
+<pre align="center">
+█▀█ █▀▀ █▀▀   █▀▀ ▄▀█ █▀█ █▄█
+█▀▄ ██▄ █▄▄   █▄█ █▀█ █▀▄ ░█░
+
+         Thanks for stopping by!
+</pre>
+
 
 
 
