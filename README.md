@@ -140,7 +140,7 @@ See the [LICENSE](./LICENSE) file for full terms and usage rights.
 </p>
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:8E2DE2,100:4A00E0&height=120&section=footer"/>
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&duration=5000&pause=1000&center=true&vCenter=true&width=435&lines=Thank+You+for+Visiting+🚀;Stay+Awesome+🎮+Keep+Hacking+💻;" />
 </p>
 
 
