@@ -140,8 +140,9 @@ See the [LICENSE](./LICENSE) file for full terms and usage rights.
 </p>
 
 <p align="center">
-  <img src="https://media.giphy.com/media/IThjAlJnD9WNO/giphy.gif" width="500" alt="8bit-game"/>
+  <img src="https://media.giphy.com/media/xT5LMHxhOfscxPfIfm/giphy.gif" width="600" alt="code-warp"/>
 </p>
+
 
 
 
