@@ -139,10 +139,11 @@ See the [LICENSE](./LICENSE) file for full terms and usage rights.
   🧠🎮 Powered by code. Crafted for emotion.
 </p>
 
-<p align="center">
-  <img src="https://media.giphy.com/media/xT5LMHxhOfscxPfIfm/giphy.gif" width="600" alt="code-warp"/>
-</p>
-
+<!-- ASCII + Glitch Text + Waving Footer -->
+[ASCII block]
+[Typing effect line]
+[Snake banner]
+[Waving footer]
 
 
 
